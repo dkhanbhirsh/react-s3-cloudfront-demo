@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="container">
       <header>
-        <h1>Hello from AWS <span className="accent">S3</span> + <span className="accent">CloudFront</span> 👋</h1>
+        <h1>my demo <span className="accent">S3</span> + <span className="accent">CloudFront</span> 👋</h1>
         <p className="subtitle">A sample React app, built with Vite, deployed via GitHub Actions.</p>
       </header>
 
