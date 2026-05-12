@@ -1,0 +1,39 @@
+# .gitignore (Terraform)
+# Excludes files that should NEVER be committed to git.
+#
+# Two main categories:
+#   1. State files -- contain a snapshot of your AWS resources, possibly with
+#      sensitive metadata. Treat like passwords.
+#   2. Variable files with real values -- may contain secrets, account IDs,
+#      bucket names that vary per user.
+
+# Terraform state files -- LOCAL ONLY, never commit.
+# In a team setup, state would be stored remotely (S3 + DynamoDB).
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Crash log
+crash.log
+crash.*.log
+
+# Real variable values -- gitignored so each user provides their own.
+# The .example file IS committed as a template.
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Local plan output -- can contain sensitive info if you save a plan to disk
+*.tfplan
+
+# Provider plugins and modules cache -- downloaded by `terraform init`,
+# can be regenerated, so no point committing (large + redundant).
+.terraform/
+.terraform.lock.hcl.bak
+
+# CLI configuration (rare, but just in case)
+.terraformrc
+terraform.rc
+
+# macOS junk
+.DS_Store
