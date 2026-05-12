@@ -34,7 +34,18 @@ function App() {
       </section>
 
       <footer>
-        <p>Built by Danish Khan · See <code>README.md</code> for setup instructions.</p>
+        <p>
+          Built by Danish Khan · See{' '}
+          
+            href="https://github.com/dkhanbhirsh/react-s3-cloudfront-demo/blob/main/README.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="readme-link"
+          >
+            <code>README.md</code>
+          </a>{' '}
+          for setup instructions.
+        </p>
       </footer>
     </div>
   )
