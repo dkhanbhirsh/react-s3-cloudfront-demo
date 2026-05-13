@@ -1,0 +1,30 @@
+# .gitignore (Terraform)
+# Excludes files that should NEVER be committed.
+
+# Terraform state files (in case backend fails or someone disables remote state)
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Crash log
+crash.log
+crash.*.log
+
+# Real variable values -- per user, gitignored.
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Local plan output
+*.tfplan
+
+# Provider plugin cache
+.terraform/
+.terraform.lock.hcl.bak
+
+# CLI config
+.terraformrc
+terraform.rc
+
+# macOS
+.DS_Store

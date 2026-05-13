@@ -1,0 +1,9 @@
+# terraform.tfvars.example
+# Copy to terraform.tfvars and fill in your values.
+# terraform.tfvars is gitignored -- never commit it.
+
+aws_region = "eu-north-1"
+
+# Globally unique S3 bucket name. Pick something specific to you.
+# Example: "yourname-react-s3-cloudfront-demo-v2"
+s3_bucket_name = "REPLACE-WITH-YOUR-UNIQUE-BUCKET-NAME"
